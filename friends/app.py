@@ -33,7 +33,4 @@ def handle_signal(data):
     emit('signal', data, room=chat_id, include_self=False)
 
 if __name__ == '__main__':
-    hostname = socket.gethostname()
-    local_ip = socket.gethostbyname(hostname)
-    print(f"Access the app at: http://{local_ip}:5000")
-    socketio.run(app, debug=True, host='0.0.0.0', port=5000)
+    socketio.run(app, debug=True)
